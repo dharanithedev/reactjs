@@ -1,0 +1,33 @@
+Step 1 : Install redux and redux-react
+
+Step 2 : Setup configuration (Create State) = 
+            import {combineReducer, createStore} from 'redux';
+            const store = createStore();
+            export default store;
+            
+            Wrap our root with provider
+            <Provider store={store}>
+                <App/>
+            </Provider>
+
+Step 3 : Create Reducer
+            Action Type
+            InitialState
+            Export reducer functions
+            Export default and update the state value based on the reducer.
+
+Step 4 : Combine reducers on config file
+            const reducer = combineReducers({
+                counter : counterReducer
+            })
+
+Step 5 : Dispatch action from components
+            import { useDispatch } from "react-redux";
+            const dispatchAction = useDispatch();
+            dispatchAction(decrement());
+
+Step 6 : Select value from store
+            import { useSelector } from "react-redux";
+
+
+
